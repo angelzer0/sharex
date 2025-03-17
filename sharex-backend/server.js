@@ -19,6 +19,7 @@ const {
 } = require("./controllers/fileController");
 
 const { upload } = require("./middlewares/uploadMiddleware");
+const { getDiskUsageController } = require("./controllers/diskController");
 
 const app = express();
 const PORT = 3000;
@@ -39,6 +40,9 @@ app.get("/back", backController);
 app.post("/upload", upload.single("file"), uploadFileController);
 app.delete("/delete-file", deleteFileController);
 app.put("/rename-file", renameFileController);
+
+// Endpoint de disco
+app.get("/disk-usage", getDiskUsageController);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
