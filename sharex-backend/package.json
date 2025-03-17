@@ -1,5 +1,5 @@
 {
-  "name": "google-drive-casero",
+  "name": "sharex",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "google-drive-casero": "file:",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "sharex": "file:"
   }
 }
