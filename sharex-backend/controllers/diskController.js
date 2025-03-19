@@ -1,4 +1,4 @@
-const { exec } = require("child_process");
+import { exec } from "child_process";
 
 // Función para formatear el tamaño del disco en TB, GB, MB o bytes
 const formatSize = (sizeInBytes) => {
@@ -19,7 +19,7 @@ const calculateConsumedSpacePercentage = (usedSpace, totalSize) => {
 };
 
 // Función para obtener la información del disco (espacio total y consumido)
-exports.getDiskUsageController = (req, res) => {
+export const getDiskUsageController = (req, res) => {
   const driveLetter = "E:"; // Puedes ajustar esto según el disco que quieras consultar
 
   exec("wmic logicaldisk get size,freespace,caption", (error, stdout) => {
